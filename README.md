@@ -23,9 +23,10 @@ we can achieve result in number of ways. But in this article we will try to appr
 ## Approach:
 1. we will create a **Theme** enum that shall support multiple markets.we need to set current Theme in appDelegate or starting point of app
 
-`Theme.current = .india`
+```
+Theme.current = .india
 
-```public enum Theme {
+public enum Theme {
     case usa
     case india
 
@@ -36,7 +37,8 @@ we can achieve result in number of ways. But in this article we will try to appr
             FontFamily.registerFonts(fontName: fontName)
            }
     }
-}```
+}
+```
 
 2. Colors: 
 
@@ -44,7 +46,8 @@ we can achieve result in number of ways. But in this article we will try to appr
 
 - add static reference for above assets from UIColor+Extension.
 
-``` extension UIColor {
+``` 
+extension UIColor {
 
     static func white(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("white",
@@ -56,7 +59,8 @@ we can achieve result in number of ways. But in this article we will try to appr
 
 - create a ColorType struct to support UIKit and SwiftUI apps.
 
-```public struct ColorType {
+```
+public struct ColorType {
     public private(set) var uiColor: UIColor
     /// Provides color for the ui elements.
     public var color: Color {
@@ -67,7 +71,8 @@ we can achieve result in number of ways. But in this article we will try to appr
 ```
 - create a Extension from Theme enum : Theme+ColorExtension.swift which holds the Color Type and shares color for uikit and SwiftUI.
 
-``` public extension Theme {
+``` 
+public extension Theme {
 
     var white: ColorType {
         let uiColor = UIColor.white(theme: self)
@@ -85,7 +90,8 @@ we can achieve result in number of ways. But in this article we will try to appr
 
 - add a FontFamily enum with cases as custom fonts.
 
-``` enum FontFamily {
+``` 
+enum FontFamily {
         case headline1(theme: Theme)
         case headline2(theme: Theme)
 
@@ -98,26 +104,28 @@ we can achieve result in number of ways. But in this article we will try to appr
 
 - create a FontStyle struct to support UIKit and SwiftUI apps.
 
-``` public struct FontStyle {
+``` 
+public struct FontStyle {
         public private(set) var uiFont: UIFont
         public var font: Font {
             // support swift ui fonts
             return uiFont.suiFont
         }
         public var lineHeight: CGFloat
-    }
+}
 ```
     
 - create a Extension from Theme enum : Theme+FontExtension.swift which holds the FontStyle  and shares fonts for uikit and SwiftUI.
 
-``` public extension Theme {
+``` 
+public extension Theme {
         var headline1: FontStyle {
             let fontStyle = FontFamily.headline1(theme: self)
             return FontStyle(uiFont: fontStyle.font,
                             lineHeight: fontStyle.lineHeight,
                             scaledUIFont: fontStyle.scaledUIFont)
         }
-    }
+}
 ```
 
 > we are done, here is how you can use the Font in your Project
