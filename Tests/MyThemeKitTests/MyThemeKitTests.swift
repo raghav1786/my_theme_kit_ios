@@ -7,11 +7,27 @@ final class MyThemeKitTests: XCTestCase {
         Theme.current = .market1
         
         
-        XCTAssertNotNil(Theme.current.red.color)
-        XCTAssertNotNil(Theme.current.blue.color)
+        XCTAssertEqual(Theme.current.red.color, UIColor(named: "market1/red",
+                                                        in: .module, compatibleWith: nil)?.suiColor)
+        XCTAssertEqual(Theme.current.blue.color, UIColor(named: "market1/blue",
+                                                         in: .module, compatibleWith: nil)?.suiColor)
         
-        XCTAssertNotNil(Theme.current.red.uiColor)
-        XCTAssertNotNil(Theme.current.blue.uiColor)
+        XCTAssertEqual(Theme.current.red.uiColor, UIColor(named: "market1/red",
+                                                           in: .module, compatibleWith: nil))
+        XCTAssertEqual(Theme.current.blue.uiColor, UIColor(named: "market1/blue",
+                                                            in: .module, compatibleWith: nil))
+        
+        Theme.current = .market2
+        
+        XCTAssertEqual(Theme.current.red.color, UIColor(named: "market2/red",
+                                                        in: .module, compatibleWith: nil)?.suiColor)
+        XCTAssertEqual(Theme.current.blue.color, UIColor(named: "market2/blue",
+                                                         in: .module, compatibleWith: nil)?.suiColor)
+        
+        XCTAssertEqual(Theme.current.red.uiColor, UIColor(named: "market2/red",
+                                                           in: .module, compatibleWith: nil))
+        XCTAssertEqual(Theme.current.blue.uiColor, UIColor(named: "market2/blue",
+                                                            in: .module, compatibleWith: nil))
     }
     
     func testFonts() {
