@@ -8,14 +8,14 @@
 import UIKit
 
 extension UIColor {
-    static func blue(theme: Theme) -> UIColor {
-        let assetName = UIColor.assetName("blue",
+    static func headline1(theme: Theme) -> UIColor {
+        let assetName = UIColor.assetName("headline1",
                                           theme: theme)
         return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .clear
     }
     
-    static func red(theme: Theme) -> UIColor {
-        let assetName = UIColor.assetName("red",
+    static func body(theme: Theme) -> UIColor {
+        let assetName = UIColor.assetName("body",
                                           theme: theme)
         return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .clear
     }

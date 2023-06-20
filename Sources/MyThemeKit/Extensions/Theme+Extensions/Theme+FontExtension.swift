@@ -8,11 +8,16 @@
 import SwiftUI
 
 public extension Theme {
-  var headline1: FontStyle {
-    let fontStyle = FontFamily.headline1(theme: self)
-      return FontStyle(uiFont: fontStyle.font,
-                       lineHeight: fontStyle.lineHeight)
-  }
+    var headline1Font: FontStyle {
+        let fontStyle = FontFamily.headline1(theme: self)
+        return FontStyle(uiFont: fontStyle.font,
+                         lineHeight: fontStyle.lineHeight)
+    }
+    var bodyFont: FontStyle {
+        let fontStyle = FontFamily.body(theme: self)
+        return FontStyle(uiFont: fontStyle.font,
+                         lineHeight: fontStyle.lineHeight)
+    }
 }
 
 // MARK: FontStyle provides support for UIColor and Color

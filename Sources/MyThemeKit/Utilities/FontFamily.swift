@@ -8,7 +8,8 @@
 import UIKit
 
 enum FontFamily {
-  case headline1(theme: Theme)
+    case headline1(theme: Theme)
+    case body(theme: Theme)
 }
 
 extension FontFamily {
@@ -33,7 +34,7 @@ extension FontFamily {
     case .market1:
       return "GTWalsheimPro"
     case .market2:
-      return "ABC"
+      return ""
     }
   }
 }
@@ -48,6 +49,8 @@ extension FontFamily {
         switch self {
         case let .headline1(theme):
             configuration = (FontFamily.fontName(theme: theme) + FontStyle.bold.rawValue, 49.0, 56.0, .headline)
+        case let .body(theme):
+            configuration = (FontFamily.fontName(theme: theme) + FontStyle.medium.rawValue, 18.0, 24.0, .body)
         }
         return configuration
     }

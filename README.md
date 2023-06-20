@@ -1,10 +1,10 @@
 
-# What is the best way to create custom fonts and colors for your iOS app supported across across multiple markets?
+# A scalable approach to create custom fonts and colours for your iOS app
 
 ## Problem Statement
-we need an Efficient and maintainable solution for creating custom Fonts
-and Colors for your app that supports both SwiftUI and UIKit. 
-Colors and fonts varies according to Market version of the app.
+- We need an efficient and maintainable solution for creating custom fonts and
+colors for our app that supports both SwiftUI and UIKit.
+- Colors and fonts vary according to the market version of the app.
 
 Eg. 
 - India has Font : X1 Color: Y1

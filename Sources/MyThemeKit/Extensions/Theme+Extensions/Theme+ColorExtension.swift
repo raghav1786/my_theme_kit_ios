@@ -8,12 +8,12 @@
 import SwiftUI
 
 public extension Theme {
-    var blue: ColorType {
-        let uiColor = UIColor.blue(theme: self)
+    var headline1: ColorType {
+        let uiColor = UIColor.headline1(theme: self)
         return ColorType(uiColor: uiColor)
     }
-    var red: ColorType {
-        let uiColor = UIColor.red(theme: self)
+    var body: ColorType {
+        let uiColor = UIColor.body(theme: self)
         return ColorType(uiColor: uiColor)
     }
 }
