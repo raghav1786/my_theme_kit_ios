@@ -9,11 +9,11 @@ colors for our app that supports both SwiftUI and UIKit.
 Eg. 
 - India has Font : X1 Color: Y1
 
-<img width="200" alt="Screenshot 2023-06-20 at 00 01 59" src="https://github.com/raghav1786/my_theme_kit_ios/assets/53406407/544c9a50-8bda-4d04-ba10-e157a3b0d7b2">
+<img width="202" alt="Screenshot 2023-06-20 at 11 39 15" src="https://github.com/raghav1786/my_theme_kit_ios/assets/53406407/f69fb862-ba18-4056-aced-3a119d4f48f1">
 
 - US has Font: X2 Color Y2
 
-<img width="200" alt="Screenshot 2023-06-20 at 00 02 42" src="https://github.com/raghav1786/my_theme_kit_ios/assets/53406407/8030f7b9-175f-46f8-823f-ea681c50a191">
+<img width="247" alt="Screenshot 2023-06-20 at 11 40 41" src="https://github.com/raghav1786/my_theme_kit_ios/assets/53406407/d85af1c0-4d22-4d28-afd0-6729f9007a83">
 
 
 ## Solution:
